@@ -13,13 +13,15 @@ $(document).ready(function () {
         console.log("button");
         var click = $(this).attr("data-value");
         
-        var eventInput = $(click).val("nes-textarea");
-        console.log(eventInput);
-        localStorage.setItem(click, eventInput);
+        var eventInput = $("textarea[data-value='" + click + "']");
+        var eventInputVal = eventInput.val();
+        localStorage.setItem(click, eventInputVal);
     });
+    
 
-    let timeStorage = ["#8am", "#9am", "#10am", "#11pm", "#12pm", "#1pm", "#2pm", "#3pm", "#4pm", "#5pm"];
-
+    let timeStorage = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17"];
+        console.log(timeStorage);
+        
     for (let i = 0; i < timeStorage.length; i++){
         let savedEvent = $('.nes-textarea')
         console.log('localStorage loop');
