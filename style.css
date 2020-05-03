@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 body{
+    background-image: url(https://www.poisonmushroom.org/content/uploads/2016/03/simcitysnesdesktop.jpg);
     font-size: 16px;
     line-height: 1;
 }
@@ -9,6 +10,18 @@ header{
     border-radius: 0;
     border-bottom: hidden;
 }
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
 textarea {
     resize: none;
 }
@@ -17,16 +30,33 @@ textarea {
   margin: 50px;
   padding: 10px;
 }
-
-
-.past {
   
+.past-hour {
+    background-color: rgb(189, 189, 189);
+    border-color: gray;
 }
-
-.present {
- 
-}
-
-.future {
   
+.present-hour {
+    background-color: red;
+    border-color: red;
+}
+  
+.future-hour {
+    background-color:green;
+    border-color:green;
+}
+  
+button {
+    background-color: rgb(194, 28, 28);
+    color: antiquewhite;
+    border-radius: 0px 5px 5px 0px;
+}
+  
+header {
+    border-bottom-width: 10px;
+    color: red;
+}
+  
+button {
+    font-size: 2em;
 }
